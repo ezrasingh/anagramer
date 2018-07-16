@@ -1,0 +1,16 @@
+version: '2'
+services:
+  graphql_api:
+    build: ./server
+    depends_on:
+     - redis
+  redis:
+    extends:
+      file: server/docker-compose.yml
+      service: redis
+  client:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - graphql_api
