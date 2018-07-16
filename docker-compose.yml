@@ -2,6 +2,8 @@ version: '2'
 services:
   graphql_api:
     build: ./server
+    volumes:
+     - ./server/src:/src
     depends_on:
      - redis
   redis:
@@ -11,6 +13,6 @@ services:
   client:
     build: .
     ports:
-      - "5000:80"
+      - 5000:5000
     depends_on:
       - graphql_api
