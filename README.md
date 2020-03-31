@@ -1,6 +1,6 @@
 # The Anagramer
 
-Solution to the Fluentcity Coding Challenge, [try it out](http://107.150.29.125:5000/)!
+Solution to the Fluentcity Coding Challenge
 
 ## The Challenge
 
